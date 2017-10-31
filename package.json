@@ -1,0 +1,21 @@
+{
+  "name": "material-design-style",
+  "version": "0.1.0",
+  "description": "Material Design Styles",
+  "main": "index.js",
+  "repository": "https://github.com/kbsbroad/material-design-style.git",
+  "author": "Bongsu Kang <kbsbroad@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss": "^6.0.13",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-loader": "^2.0.8",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  }
+}
