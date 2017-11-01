@@ -1,11 +1,15 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const config = require('../config')
+
+const resolve = (...args) => {
+  return path.resolve(__dirname, '..', ...args)
+}
 
 const webpackConfig = {
-  context: path.resolve(__dirname, '..', 'src'),
-  entry: 'index.js',
+  entry: resolve('src', 'main.js'),
   output: {
-
+    path: config.build.root
   },
   module: {
     rules: [
