@@ -1,7 +1,5 @@
-:root {
-  --color-text-primary-on-light: rgba(0, 0, 0, 0.87);
-}
-
 .mds-button {
+  /* font */
+  font-family: Roboto, sans-serif;
   color: var(--color-text-primary-on-light);
 }

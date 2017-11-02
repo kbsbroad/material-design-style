@@ -2,14 +2,19 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const config = require('../config')
 
+const IS_PROD = process.env.NODE_ENV === 'production'
+const CSS_FILENAME_PATTERN = `[name]${IS_PROD ? '.min' : ''}.css`
+
 const resolve = (...args) => {
   return path.resolve(__dirname, '..', ...args)
 }
 
 const webpackConfig = {
-  entry: resolve('src', 'main.js'),
+  entry: resolve('src', 'main.css'),
   output: {
-    path: config.build.root
+    path: config.build.root,
+    publicPath: config.build.publicPath,
+    filename: CSS_FILENAME_PATTERN
   },
   module: {
     rules: [
@@ -28,7 +33,7 @@ const webpackConfig = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin(CSS_FILENAME_PATTERN)
   ]
 }
 
